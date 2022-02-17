@@ -1,0 +1,17 @@
+{
+  "name": "codesshop",
+  "version": "0.0.1",
+  "description": "",
+  "main": "main.js",
+  "dependencies": {
+    "mongodb": "^4.3.0",
+    "nodemon": "^2.0.15",
+    "telegraf": "^4.5.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "nodemon main.js"
+  },
+  "author": "Technostone-dev",
+  "license": "ISC"
+}
