@@ -432,7 +432,7 @@ bot.hears(['📊 Status'], async ctx => {
   let dData = await db.collection('allUsers').find().toArray()
   // <b>Total Codes </b>\n<i>  - Total Codes in Bot: ' + dData.length + '</i>\n<i>  - Total BJS Codes : ' + dData.length + '</i>\n<i>  - Total Telegraf Codes : ' + dData.length + '</i>\n<i>  - Total APi Codes : ' + dData.length + '</i>
   ctx.reply(
-    '<b>🥳 Hello ' + ctx.from.first_name + '\n\nCodesShop Bot Stats </b>\n<i>  - Total  User : ' + dData.length + '\n  - Total Verify User : <b>'+maindata.length+'</b>\n  - Total Buyed Codes : <b>'+totalS[0].timebuy+'</b>\n  - Total Time Deposit : <b></b>\n  - Total Redeem Code: <b></b>\n  - Total Redeemed Code: <b></b> . \n\n</i>', { disable_web_page_preview: true, parse_mode: 'html' })
+    '<b>🥳 Hello ' + ctx.from.first_name + '\n\nCodesShop Bot Stats </b>\n<i>  - Total  User : ' + dData.length + '\n  - Total Verify User : <b>'+maindata.length+'</b>\n  - Total Buyed Codes : \n  - Total Time Deposit : <b></b>\n  - Total Redeem Code: <b></b>\n  - Total Redeemed Code: <b></b> . \n\n</i>', { disable_web_page_preview: true, parse_mode: 'html' })
 })
 
 bot.hears(['/id'], async ctx => {
