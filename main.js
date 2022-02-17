@@ -32,7 +32,7 @@ const mainMenu = {
   }
 };
 var startMsg = '*Hi, before you start the bot, please Subscribe Youtube Channel And Join Telegram Channel Also.*\n\n▪️ [Rarecodes](https://t.me/rarecodes)\n▪️ [StoneTransactions](https://t.me/StoneTransactions)\n▪️[ Techno Stone](https://youtube.com/technostone)  \n\n*If All Done, Click On check Button*'
-mongo.connect('mongodb+srv://techno:techno@cluster0.0waa2.mongodb.net/myFirstDatabase?retryWrites=true&w=majority', { useUnifiedTopology: true }, (err, client) => {
+mongo.connect('mongodb+srv://stone:2104@shop@stoneshop.6csdl.mongodb.net/myFirstDatabase?retryWrites=true&w=majority', { useUnifiedTopology: true }, (err, client) => {
   if (err) {
     console.log(err)
   }
