@@ -4,7 +4,7 @@ const mongo = require('mongodb').MongoClient;
 const { enter, leave } = Stage
 const stage = new Stage();
 const Scene = BaseScene
-const bot = new Telegraf('2008200336:AAH4mzCkM9yqAsryEaqv4iE-tOTsC01gjo8');
+const bot = new Telegraf('5063659497:AAFm-WvGJgLsDMbZPDoPKLaZefWdXUP2lmA');
 let ch1 = "@rarecodes"
 let ch2 = "@StoneTransactions"
 var admin = '1095232231'
@@ -18,7 +18,7 @@ function rndInt(min, max) {
 /* The Bot Config */
 var ref_bonus = 5 // Refer Bonus
 var bot_cur = 'Stone' // Currency Symbol/Tag
-var bot_name = 'ultroid_223128_bot' // Bot Username Add Original username
+var bot_name = 'CodesShopbot' // Bot Username Add Original username
 /* The Bot Msg Config */
 const mainMenu = {
   "reply_markup": {
@@ -190,7 +190,7 @@ bot.action(/bmt_+/, async ctx => {
   }
   if (v == "NODE"){ 
     lists = 'nodelist'
-    codeId = "node00"
+    codeId = "NODE00"
   }
   if (v == "BJS"){ 
     lists = 'bjslist'
@@ -337,12 +337,12 @@ bot.action(/scode_+/, async ctx => {
   if (v == "HTML"){ 
     lists = 'htmllist'
     base = 'htmlsaved'
-    codeId = "PHP00"
+    codeId = "HTML00"
   }
   if (v == "API"){ 
     lists = 'apilist'
     base = 'apisaved'
-    codeId = "api00"
+    codeId = "API00"
   }
   if (v == "PHP"){ 
     lists = 'phplist'
@@ -395,7 +395,7 @@ bot.action(/buyapi_+/, async ctx=>{
   if (v == "HTML"){ 
     base = 'htmlsaved'
   }
-  if (v == "API" || "api"){ 
+  if (v == "API"){ 
     base = 'apisaved'
   }
   if (v == "PHP"){ 
