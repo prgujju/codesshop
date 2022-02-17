@@ -473,7 +473,7 @@ idhandle.on('message', async (ctx) => {
   redeemC.on('text', async (ctx) => {
     ctx.scene.leave();
     let num = ctx.message.text
-    if(num.length <= 12){ return ctx.replyWithMarkdown('*Code Not Valid*')}
+    if(num.length < 12){ return ctx.replyWithMarkdown('*Code Not Valid*')}
     let rData = await db.collection('extra').find({ redeemcode: num }).toArray()
     if(rData.length === 0){ return} 
     else 
