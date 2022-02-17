@@ -480,11 +480,14 @@ idhandle.on('message', async (ctx) => {
     if(rData[0].null === true){ return ctx.replyWithMarkdown('*Already Redeemed*')}
     {
       try{
-        let thisUsersData = await db.collection('allUsers').find({ userId: ctx.from.id }).toArray()
+        let thisUsersData = await db.collection('vUsers').find({ userId: ctx.from.id }).toArray()
         var sum = thisUsersData[0].balance
         var redeem = sum + rData[0].rvalue
-        console.log("its done")
-        db.collection('allUsers').updateOne({ userId: ctx.from.id }, { $set: { balance: redeem } }, { upsert: true })
+        bot.telegram.sendMessage('@StoneTransactions', 
+      '_🎉 REEDEMED CODE BY_ *'+ctx.from.first_name+'*\n\n_💵 Amount:_ '+rData[0].rvalue+'\n\n *CODE: '+num+'*', 
+      { parse_mode: 'markdown' })}
+        ctx.replyWithMarkdown('*🎊Congratulations, code successfully redeemed, added to balance: '+rData[0].rvalue+'*')
+        db.collection('vUsers').updateOne({ userId: ctx.from.id }, { $set: { balance: redeem } }, { upsert: true })
         db.collection('extra').updateOne({ redeemcode: num }, { $set: { null: true  } }, { upsert: true })
         var totalS = await db.collection('extra').find({ totalS: "status" }).toArray()
           if (totalS == "") {
