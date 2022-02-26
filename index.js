@@ -483,7 +483,7 @@ idhandle.on('message', async (ctx) => {
         var sum = thisUsersData[0].balance
         var redeem = sum + rData[0].rvalue
         bot.telegram.sendMessage('@StoneTransactions', 
-      '_🎉 REEDEMED CODE BY_ *'+ctx.from.first_name+'*\n\n_💵 Amount:_ '+rData[0].rvalue+'\n\n *🤩 CODE:* '+num+'*', 
+      '_🎉 REEDEMED CODE BY_ *'+ctx.from.first_name+'*\n\n_💵 Amount:_ *'+rData[0].rvalue+'\n\n *🤩 CODE:* '+num+'*', 
       { parse_mode: 'markdown' })
         ctx.replyWithMarkdown('*🎊Congratulations, Code Successfully Redeemed, \n '+rData[0].rvalue+' * Stone added to Balance')
         db.collection('vusers').updateOne({ userId: ctx.from.id }, { $set: { balance: redeem } }, { upsert: true })
