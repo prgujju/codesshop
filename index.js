@@ -26,8 +26,7 @@ const mainMenu = {
     "keyboard": [
       ["👤 Profile"],
       ["📁 Get Codes", "📁 Source Code"],
-      ["🎫 Redeem Code", "📊 Status"],
-      ["📞 Support"]
+      ["🎫 Redeem Code","📞 Support"]
     ]
   }
 };
