@@ -10,7 +10,7 @@
   },
   "devDependencies": {},
   "scripts": {
-    "start": "nodemon main.js"
+    "start": "nodemon index.js"
   },
   "author": "Technostone-dev",
   "license": "ISC"
